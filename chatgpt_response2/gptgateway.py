@@ -11,7 +11,7 @@ sys.path.append(CURRDIR)
 
 def completion(requestData):
 
-    api_key = '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'
+    api_key = os.getenv('CHATGPT_API_KEY')
     endpoint = "https://api.openai.com/v1/chat/completions"
 
     headers = {"Authorization": f"Bearer {api_key}",
